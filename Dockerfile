@@ -2,6 +2,9 @@ FROM openjdk:11-jdk
 RUN apt-get update && \
     apt-get install -y maven && \
     rm -rf /var/lib/apt/lists/*
+
+EXPOSE 8080
+
 WORKDIR /app
 COPY . /app/
 # COPY src /app/src
